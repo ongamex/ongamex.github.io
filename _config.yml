@@ -60,6 +60,11 @@ social:
   links: # An array of links to social media profiles
     - https://twitter.com/ongamex92
     - https://github.com/ongamex
+    
+analytics:
+  provider               : "google" # false (default), "google", "google-universal", "custom"
+  google:
+    tracking_id          : "UA-105845169-1"
 
 # Site Author
 author:
