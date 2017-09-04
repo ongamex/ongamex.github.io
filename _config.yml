@@ -9,7 +9,7 @@ future: true # allow the publishing of posts in the future
 
 # Site Settings
 locale                   : "en"
-title                    : "GameDev and Programming"
+title                    : "ongamex's GameDev and Programming Blog"
 title_separator          : "-"
 name                     : "ongamex"
 description              : "Here I'll share my GameDev and Programming experiences!"
