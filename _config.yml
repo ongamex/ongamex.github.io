@@ -22,7 +22,7 @@ words_per_minute         : 140
 comments:
   provider               : "disqus"
   disqus:
-    shortname            : "ongamex" # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+    shortname            : "http-ongamex-github-io" # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
 staticman:
   allowedFields          : ['name', 'email', 'url', 'message']
   branch                 : "master"
