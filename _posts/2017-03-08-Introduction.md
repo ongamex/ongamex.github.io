@@ -1,5 +1,5 @@
 ---
-title:  "Code Snippeds"
+title:  "Code Snippets"
 date:   2017-09-04
 categories: C++
 tags: [C++]
