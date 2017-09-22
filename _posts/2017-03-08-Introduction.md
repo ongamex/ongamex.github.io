@@ -8,7 +8,7 @@ excerpt: "Some short and useful code snippets."
 
 This is a set of some code snippets that you might find useful. 
 
-The 1st one is pretty popular, but I use it in the snippets below. Basically it a way to retrieve the size of a C++ array.
+The 1st one is pretty popular, but I use it in the snippets below. Basically it's a way to retrieve the size of a C++ array.
 
 ```cpp
 template <typename T, size_t N> char (&TArrSize_Safe(T (&)[N]))[N];
