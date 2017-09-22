@@ -19,14 +19,14 @@ int myArray[1234];
 printf("myArray has %d elements!" ARRSZ(myArray));
 ```
 
-This is a printf style **std::string** formatting:  
+This is a ```printf``` style ```std::string``` formatting:  
 ```cpp
 // The caller is EXPECTED to call va_end on the va_list args
 inline void string_format(std::string& retval, const char* const fmt_str, va_list args)
 {	
 	// [CAUTION]
 	// Under Windows with msvc it is fine to call va_start once and then use the va_list multiple times.
-	// However this is not the case on the other plafroms. The POSIX docs state that the va_list is undefined
+	// However this is not the case on the other platforms. The POSIX docs state that the va_list is undefined
 	// after calling vsnprintf with it:
 	//
 	// From https://linux.die.net/man/3/vsprintf :
@@ -71,7 +71,8 @@ inline std::string string_format(const char* const fmt_str, ...)
 }
 ```
 
-I guess it could be done more safely, by using a char* or std::unique_ptr<char[]> to get the result of vsnprintf and then transfer it to std::string, but that one works just fine.
+I guess it could be done in a safer way by using a ```char*``` or ```std::unique_ptr<char[]>``` to get the result of ```vsnprintf``` and then transfer it to ```std::string```,
+ but that one works just fine.
 
 ---
 This one is a simple file open dialog. WINAPI is used for Windows, and zenity for GNU/Linux:
@@ -131,7 +132,7 @@ std::string FileOpenDialog(const std::string& prompt)
 }
 ```
 ---
-And finally just a small **std::chrono** based timer:
+And finally just a small ```std::chrono```  based timer:
 
 ```cpp
 struct Timer
