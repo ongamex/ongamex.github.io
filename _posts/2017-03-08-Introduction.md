@@ -8,7 +8,9 @@ excerpt: "Some short and useful code snippets."
 
 This is a set of some code snippets that you might find useful. 
 
-The 1st one is pretty popular, but I use it in the snippets below. Basically it's a way to retrieve the size of a C++ array.
+The 1st one is pretty popular, but I use it in the snippets below. Basically it is 
+
+# A way to retrieve the size of a C++ array.
 
 ```cpp
 template <typename T, size_t N> char (&TArrSize_Safe(T (&)[N]))[N];
@@ -19,7 +21,7 @@ int myArray[1234];
 printf("myArray has %d elements!" ARRSZ(myArray));
 ```
 
-This is a ```printf``` style ```std::string``` formatting:  
+# ```printf``` style ```std::string``` formatting:  
 ```cpp
 // The caller is EXPECTED to call va_end on the va_list args
 inline void string_format(std::string& retval, const char* const fmt_str, va_list args)
@@ -74,8 +76,9 @@ inline std::string string_format(const char* const fmt_str, ...)
 I guess it could be done in a safer way by using a ```char*``` or ```std::unique_ptr<char[]>``` to get the result of ```vsnprintf``` and then transfer it to ```std::string```,
  but that one works just fine.
 
----
-This one is a simple file open dialog. WINAPI is used for Windows, and zenity for GNU/Linux:
+# Simple file open dialog.
+
+WINAPI is used for Windows, and zenity for GNU/Linux:
 ```cpp
 template <typename T, size_t N> char (&TArrSize_Safe(T (&)[N]))[N];
 #define ARRSZ(A) (sizeof(TArrSize_Safe(A)))
@@ -132,7 +135,7 @@ std::string FileOpenDialog(const std::string& prompt)
 }
 ```
 ---
-And finally just a small ```std::chrono```  based timer:
+# A ```std::chrono```  based timer:
 
 ```cpp
 struct Timer
