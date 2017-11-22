@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on ongamex&#39;s blog</title>
+    <link>https://username.github.io/page/</link>
+    <description>Recent content in Pages on ongamex&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>ongamex@windowslive.com (ongamex)</managingEditor>
+    <webMaster>ongamex@windowslive.com (ongamex)</webMaster>
+    
+	<atom:link href="https://username.github.io/page/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About me</title>
+      <link>https://username.github.io/page/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>ongamex@windowslive.com (ongamex)</author>
+      <guid>https://username.github.io/page/about/</guid>
+      <description>Although I identify myself as a game programmer, I currently work fulltime at Chaos Group - a company that develops VFX and ArchVis tools. A popular examples would be Phoenix FD and V-Ray.
+I&amp;rsquo;m mostly involved in Phoenix FD - a liquids/atmospheres simulation and rendering engine:
+ I do a lot of coding at home, trying to develop a 3D puzzle game using my own technology written mostly in C++.</description>
+    </item>
+    
+  </channel>
+</rss>

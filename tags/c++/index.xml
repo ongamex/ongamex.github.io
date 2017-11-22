@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>C&#43;&#43; on ongamex&#39;s blog</title>
+    <link>https://username.github.io/tags/c&#43;&#43;/</link>
+    <description>Recent content in C&#43;&#43; on ongamex&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>ongamex@windowslive.com (ongamex)</managingEditor>
+    <webMaster>ongamex@windowslive.com (ongamex)</webMaster>
+    <lastBuildDate>Mon, 04 Sep 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://username.github.io/tags/c++/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Code Snippets</title>
+      <link>https://username.github.io/post/001.codesnippets/</link>
+      <pubDate>Mon, 04 Sep 2017 00:00:00 +0000</pubDate>
+      <author>ongamex@windowslive.com (ongamex)</author>
+      <guid>https://username.github.io/post/001.codesnippets/</guid>
+      <description>This is a set of some code snippets that you might find useful.
+The 1st one is pretty popular, but I use it in the snippets below. Basically it is
+A way to retrieve the size of a C++ array. template &amp;lt;typename T, size_t N&amp;gt; char (&amp;amp;TArrSize_Safe(T (&amp;amp;)[N]))[N]; #define ARRSZ(A) (sizeof(TArrSize_Safe(A))) // Usage int myArray[1234]; printf(&amp;quot;myArray has %d elements!&amp;quot; ARRSZ(myArray));  printf style std::string formatting: // The caller is EXPECTED to call va_end on the va_list args inline void string_format(std::string&amp;amp; retval, const char* const fmt_str, va_list args) { // [CAUTION] // Under Windows with msvc it is fine to call va_start once and then use the va_list multiple times.</description>
+    </item>
+    
+  </channel>
+</rss>
