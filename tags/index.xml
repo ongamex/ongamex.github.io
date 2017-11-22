@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on ongamex&#39;s blog</title>
-    <link>https://username.github.io/tags/</link>
+    <link>https://ongamex.github.io/tags/</link>
     <description>Recent content in Tags on ongamex&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>ongamex@windowslive.com (ongamex)</managingEditor>
     <webMaster>ongamex@windowslive.com (ongamex)</webMaster>
     <lastBuildDate>Mon, 04 Sep 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://username.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://ongamex.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>C&#43;&#43;</title>
-      <link>https://username.github.io/tags/c&#43;&#43;/</link>
+      <link>https://ongamex.github.io/tags/c&#43;&#43;/</link>
       <pubDate>Mon, 04 Sep 2017 00:00:00 +0000</pubDate>
       <author>ongamex@windowslive.com (ongamex)</author>
-      <guid>https://username.github.io/tags/c&#43;&#43;/</guid>
+      <guid>https://ongamex.github.io/tags/c&#43;&#43;/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Maya</title>
-      <link>https://username.github.io/tags/maya/</link>
+      <link>https://ongamex.github.io/tags/maya/</link>
       <pubDate>Fri, 08 Sep 2017 00:00:00 +0000</pubDate>
       <author>ongamex@windowslive.com (ongamex)</author>
-      <guid>https://username.github.io/tags/maya/</guid>
+      <guid>https://ongamex.github.io/tags/maya/</guid>
       <description></description>
     </item>
     

@@ -2,42 +2,42 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ongamex&#39;s blog</title>
-    <link>https://username.github.io/</link>
+    <link>https://ongamex.github.io/</link>
     <description>Recent content on ongamex&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>ongamex@windowslive.com (ongamex)</managingEditor>
     <webMaster>ongamex@windowslive.com (ongamex)</webMaster>
     <lastBuildDate>Thu, 28 Sep 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://username.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://ongamex.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>C&#43;&#43; reflection/introspection system</title>
-      <link>https://username.github.io/post/002.cpp.reflections/</link>
+      <link>https://ongamex.github.io/post/002.cpp.reflections/</link>
       <pubDate>Thu, 28 Sep 2017 00:00:00 +0000</pubDate>
       <author>ongamex@windowslive.com (ongamex)</author>
-      <guid>https://username.github.io/post/002.cpp.reflections/</guid>
+      <guid>https://ongamex.github.io/post/002.cpp.reflections/</guid>
       <description>Why do I need this? &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; As some of you may know, I&amp;rsquo;m writing a game in my spare time. In order to make the level/game editor usable, I have to be able to quickly display and edit values. Doing the UI/Serialization/UndoRedo by hand for every type is just too much. The solution to that problem is usually some kind of reflection or introspection system.
 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Unfortunately C++ does not have a built in solution.</description>
     </item>
     
     <item>
       <title>2D Animation In Maya: Import images as planes</title>
-      <link>https://username.github.io/post/003.maya2danim/</link>
+      <link>https://ongamex.github.io/post/003.maya2danim/</link>
       <pubDate>Fri, 08 Sep 2017 00:00:00 +0000</pubDate>
       <author>ongamex@windowslive.com (ongamex)</author>
-      <guid>https://username.github.io/post/003.maya2danim/</guid>
+      <guid>https://ongamex.github.io/post/003.maya2danim/</guid>
       <description>A while ago I wanted to create a simple 2D &amp;ldquo;cut-out&amp;rdquo; animation, just a few images imported and assigned on a planes. Unfortunately, Maya did not had this functionally built in. Doing this by hand requires you to:
  Create a File Texture Create some material and assign the texture as diffuse colour and alpha Create a plane with correct width/height ratio Modify the UV channel Assign the previously created material to the plane  And on top of that you&amp;rsquo;ve got to do it for every single image that you want to use.</description>
     </item>
     
     <item>
       <title>Code Snippets</title>
-      <link>https://username.github.io/post/001.codesnippets/</link>
+      <link>https://ongamex.github.io/post/001.codesnippets/</link>
       <pubDate>Mon, 04 Sep 2017 00:00:00 +0000</pubDate>
       <author>ongamex@windowslive.com (ongamex)</author>
-      <guid>https://username.github.io/post/001.codesnippets/</guid>
+      <guid>https://ongamex.github.io/post/001.codesnippets/</guid>
       <description>This is a set of some code snippets that you might find useful.
 The 1st one is pretty popular, but I use it in the snippets below. Basically it is
 A way to retrieve the size of a C++ array. template &amp;lt;typename T, size_t N&amp;gt; char (&amp;amp;TArrSize_Safe(T (&amp;amp;)[N]))[N]; #define ARRSZ(A) (sizeof(TArrSize_Safe(A))) // Usage int myArray[1234]; printf(&amp;quot;myArray has %d elements!&amp;quot; ARRSZ(myArray));  printf style std::string formatting: // The caller is EXPECTED to call va_end on the va_list args inline void string_format(std::string&amp;amp; retval, const char* const fmt_str, va_list args) { // [CAUTION] // Under Windows with msvc it is fine to call va_start once and then use the va_list multiple times.</description>
@@ -45,10 +45,10 @@ A way to retrieve the size of a C++ array. template &amp;lt;typename T, size_t N
     
     <item>
       <title>About me</title>
-      <link>https://username.github.io/page/about/</link>
+      <link>https://ongamex.github.io/page/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>ongamex@windowslive.com (ongamex)</author>
-      <guid>https://username.github.io/page/about/</guid>
+      <guid>https://ongamex.github.io/page/about/</guid>
       <description>Although I identify myself as a game programmer, I currently work fulltime at Chaos Group - a company that develops VFX and ArchVis tools. A popular examples would be Phoenix FD and V-Ray.
 I&amp;rsquo;m mostly involved in Phoenix FD - a liquids/atmospheres simulation and rendering engine:
  I do a lot of coding at home, trying to develop a 3D puzzle game using my own technology written mostly in C++.</description>
