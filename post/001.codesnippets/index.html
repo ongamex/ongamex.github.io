@@ -5,9 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Code Snippets</title>
-  <meta property="og:title" content="Code Snippets" />
-  <meta name="twitter:title" content="Code Snippets" />
+  <title>C&#43;&#43; Code Snippets 1</title>
+  <meta property="og:title" content="C&#43;&#43; Code Snippets 1" />
+  <meta name="twitter:title" content="C&#43;&#43; Code Snippets 1" />
   <meta name="description" content="This is a set of some code snippets that you might find useful.
 The 1st one is pretty popular, but I use it in the snippets below. Basically it is
 A way to retrieve the size of a C&#43;&#43; array. template &lt;typename T, size_t N&gt; char (&amp;TArrSize_Safe(T (&amp;)[N]))[N]; #define ARRSZ(A) (sizeof(TArrSize_Safe(A))) // Usage int myArray[1234]; printf(&quot;myArray has %d elements!&quot; ARRSZ(myArray));  printf style std::string formatting: // The caller is EXPECTED to call va_end on the va_list args inline void string_format(std::string&amp; retval, const char* const fmt_str, va_list args) { // [CAUTION] // Under Windows with msvc it is fine to call va_start once and then use the va_list multiple times.">
@@ -174,7 +174,7 @@ ga('send', 'pageview');
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="post-heading">
-              <h1>Code Snippets</h1>
+              <h1>C&#43;&#43; Code Snippets 1</h1>
                 
                 
                   <span class="post-meta">
@@ -431,14 +431,6 @@ private :
                   <span class="fa-stack fa-lg">
                     <i class="fa fa-circle fa-stack-2x"></i>
                     <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="https://github.com/ongamex" title="GitHub">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
                   </span>
                 </a>
               </li>

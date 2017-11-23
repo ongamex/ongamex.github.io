@@ -7,10 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>ongamex@windowslive.com (ongamex)</managingEditor>
     <webMaster>ongamex@windowslive.com (ongamex)</webMaster>
-    <lastBuildDate>Thu, 28 Sep 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 23 Nov 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://ongamex.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>C&#43;&#43; minimal std::any</title>
+      <link>https://ongamex.github.io/post/004.anyobject/</link>
+      <pubDate>Thu, 23 Nov 2017 00:00:00 +0000</pubDate>
+      <author>ongamex@windowslive.com (ongamex)</author>
+      <guid>https://ongamex.github.io/post/004.anyobject/</guid>
+      <description>A few days ago I wrote a simple alternative to std::any. It is heavily inspired by Sean Parent&amp;rsquo;s talk Better Code: Runtime Polymorphism.
+If you don&amp;rsquo;t know what std::any is, basically it is a type that can hold data form any type, while maintaining the value semantics.
+With C++11 this is really easily done in just a few lines. I&amp;rsquo;m still unsure how and where can I use it.
+// &amp;quot;struct object&amp;quot; is the magic type.</description>
+    </item>
     
     <item>
       <title>C&#43;&#43; reflection/introspection system</title>
@@ -33,7 +45,7 @@
     </item>
     
     <item>
-      <title>Code Snippets</title>
+      <title>C&#43;&#43; Code Snippets 1</title>
       <link>https://ongamex.github.io/post/001.codesnippets/</link>
       <pubDate>Mon, 04 Sep 2017 00:00:00 +0000</pubDate>
       <author>ongamex@windowslive.com (ongamex)</author>

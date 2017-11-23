@@ -5,14 +5,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>2D Animation In Maya: Import images as planes</title>
-  <meta property="og:title" content="2D Animation In Maya: Import images as planes" />
-  <meta name="twitter:title" content="2D Animation In Maya: Import images as planes" />
-  <meta name="description" content="A while ago I wanted to create a simple 2D &ldquo;cut-out&rdquo; animation, just a few images imported and assigned on a planes. Unfortunately, Maya did not had this functionally built in. Doing this by hand requires you to:
- Create a File Texture Create some material and assign the texture as diffuse colour and alpha Create a plane with correct width/height ratio Modify the UV channel Assign the previously created material to the plane  And on top of that you&rsquo;ve got to do it for every single image that you want to use.">
-  <meta property="og:description" content="A while ago I wanted to create a simple 2D &ldquo;cut-out&rdquo; animation, just a few images imported and assigned on a planes. Unfortunately, Maya did not had this functionally built in. Doing this by hand requires you to:
- Create a File Texture Create some material and assign the texture as diffuse colour and alpha Create a plane with correct width/height ratio Modify the UV channel Assign the previously created material to the plane  And on top of that you&rsquo;ve got to do it for every single image that you want to use.">
-  <meta name="twitter:description" content="A while ago I wanted to create a simple 2D &ldquo;cut-out&rdquo; animation, just a few images imported and assigned on a planes. Unfortunately, Maya did not had this functionally built in. Doing this …">
+  <title>C&#43;&#43; minimal std::any</title>
+  <meta property="og:title" content="C&#43;&#43; minimal std::any" />
+  <meta name="twitter:title" content="C&#43;&#43; minimal std::any" />
+  <meta name="description" content="A few days ago I wrote a simple alternative to std::any. It is heavily inspired by Sean Parent&rsquo;s talk Better Code: Runtime Polymorphism.
+If you don&rsquo;t know what std::any is, basically it is a type that can hold data form any type, while maintaining the value semantics.
+With C&#43;&#43;11 this is really easily done in just a few lines. I&rsquo;m still unsure how and where can I use it.
+// &quot;struct object&quot; is the magic type.">
+  <meta property="og:description" content="A few days ago I wrote a simple alternative to std::any. It is heavily inspired by Sean Parent&rsquo;s talk Better Code: Runtime Polymorphism.
+If you don&rsquo;t know what std::any is, basically it is a type that can hold data form any type, while maintaining the value semantics.
+With C&#43;&#43;11 this is really easily done in just a few lines. I&rsquo;m still unsure how and where can I use it.
+// &quot;struct object&quot; is the magic type.">
+  <meta name="twitter:description" content="A few days ago I wrote a simple alternative to std::any. It is heavily inspired by Sean Parent&rsquo;s talk Better Code: Runtime Polymorphism.
+If you don&rsquo;t know what std::any is, basically it is …">
   <meta name="author" content="ongamex"/>
   <link href='https://ongamex.github.io/images/me.jpg' rel='icon' type='image/x-icon'/>
   <meta property="og:image" content="https://ongamex.github.io/images/me.jpg" />
@@ -20,12 +25,12 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@ongamex92" />
   <meta name="twitter:creator" content="@ongamex92" />
-  <meta property="og:url" content="https://ongamex.github.io/post/003.maya2danim/" />
+  <meta property="og:url" content="https://ongamex.github.io/post/004.anyobject/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="ongamex&#39;s blog" />
 
   <meta name="generator" content="Hugo 0.31" />
-  <link rel="canonical" href="https://ongamex.github.io/post/003.maya2danim/" />
+  <link rel="canonical" href="https://ongamex.github.io/post/004.anyobject/" />
   <link rel="alternate" href="" type="application/rss+xml" title="ongamex&#39;s blog">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -170,12 +175,12 @@ ga('send', 'pageview');
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="post-heading">
-              <h1>2D Animation In Maya: Import images as planes</h1>
+              <h1>C&#43;&#43; minimal std::any</h1>
                 
                 
                   <span class="post-meta">
-  <i class="fa fa-calendar-o"></i>&nbsp;Posted on September 8, 2017
-  &nbsp;|&nbsp; <i class="fa fa-clock-o"></i> 2 min (419 mots)
+  <i class="fa fa-calendar-o"></i>&nbsp;Posted on November 23, 2017
+  &nbsp;|&nbsp; <i class="fa fa-clock-o"></i> 2 min (240 mots)
   
 </span>
 
@@ -194,99 +199,102 @@ ga('send', 'pageview');
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        <p>A while ago I wanted to create a simple 2D &ldquo;cut-out&rdquo; animation, just a few images imported and assigned on a planes.
-Unfortunately, Maya did not had this functionally built in. Doing this by hand requires you to:</p>
+        <p>A few days ago I wrote a simple alternative to <code>std::any</code>. It is heavily inspired by Sean Parent&rsquo;s talk
+<a href="https://www.youtube.com/watch?v=QGcVXgEVMJg">Better Code: Runtime Polymorphism</a>.</p>
 
-<ul>
-<li>Create a File Texture</li>
-<li>Create some material and assign the texture as diffuse colour and alpha</li>
-<li>Create a plane with correct width/height ratio</li>
-<li>Modify the UV channel</li>
-<li>Assign the previously created material to the plane</li>
-</ul>
+<p>If you don&rsquo;t know what <code>std::any</code> is, basically it is a type that can hold data form any type,
+while maintaining the value semantics.</p>
 
-<p>And on top of that you&rsquo;ve got to do it for every single image that you want to use.<br />
-In order to avoid doing this tedious task by hand, I wrote a script that does just that in a few clicks.<br />
-Basically the scripts prompts you to pick the images that you want to import, and everything else is done automatically.</p>
+<p>With C++11 this is really easily done in just a few lines. I&rsquo;m still unsure how and where can I use it.</p>
 
-<p><img src="/images/maya2Dscreenshot.png" alt="" /></p>
+<pre><code class="language-cpp">// &quot;struct object&quot; is the magic type.
+// Basically &quot;object&quot; holds a pointer to &quot;object_storage_interface&quot;.
+//
+// This &quot;object_storage_interface&quot; basically holds the *actual data* 
+// and provides a few methods used for communication 
+// between the data and the &quot;srtuct object&quot;.
 
-<p>You can just execute the script &ldquo;Script Editor&rdquo; or assign it to a button on the shelf.</p>
+#include &lt;iostream&gt;
+#include &lt;memory&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
 
-<pre><code class="language-php">// &lt;?php This is actually mel script, I'm just using the syntax highlight for php ^_^
-
-// This scripts creates a planes and assignees to them materials
-// that use 2D textures for their colours.
-
-proc string obtainFilename(string $path)
+struct object_storage_interface
 {
-  $filepart = match( &quot;[^/\\]*$&quot;, $path );
-  
-  string $buffer[];
-  tokenize $filepart &quot;.&quot; $buffer;
+    object_storage_interface() {}
+    
+    virtual ~object_storage_interface() = default;
+    virtual std::unique_ptr&lt;object_storage_interface&gt; createACopy() const = 0;
+};
 
-  return $buffer[0];
-}
-
-proc textureTo2DPlane(string $textureFileName)
+template&lt;typename T&gt;
+struct Tobject_storage : public object_storage_interface
 {
-    $filename = obtainFilename($textureFileName);
-    
-    // Create the texture and a 2D placement for it.
-    $textureFile = `shadingNode -asTexture -isColorManaged file -name (&quot;file_&quot;+$filename)`;
-    $texturePlacement2D = `shadingNode -asUtility place2dTexture`;
-    connectAttr -f ($texturePlacement2D+&quot;.coverage&quot;) ($textureFile+&quot;.coverage&quot;);
+    Tobject_storage() = default;
+    Tobject_storage(T v) :
+        m_value(std::move(v))
+    {}
 
-    setAttr -type &quot;string&quot; ($textureFile+&quot;.fileTextureName&quot;) $textureFileName;
-    
-    // Create the material and attach the file as an input color.
-    $material = `shadingNode -asShader lambert -name (&quot;mtl_&quot; + $filename)`;
-    connectAttr -f ($textureFile+&quot;.outColor&quot;) ($material+&quot;.color&quot;);
-    connectAttr -f ($textureFile+&quot;.outTransparency&quot;) ($material+&quot;.transparency&quot;);
-    
-    // Obtain the size of the texture.
-    float $size[2] = `getAttr ($textureFile+&quot;.outSize&quot;)`;
-    
-    // &quot; -axis 0 0 1&quot; will make the &quot;plane&quot; in XY plane, facing Z.
-    // &quot;sx&quot; and &quot;sy&quot; control the amount of segments in each plane.
-    $mesh = `polyPlane -w ($size[0]) -h ($size[1]) -sx 1 -sy 1 -axis 0 0 1 -name ($filename)`;
-    
-    // Now apply the newly created material.
-    // TODO: Check if we could do this without selecting.
-    // TODO: Should I create a default shading group?
-    select $mesh;
-    hyperShade -assign ($material);
-}
-
-proc promptForFiles()
-{
-    string $filenames[] = `fileDialog2 -fileMode 4 -caption &quot;Import Image&quot;`;
-    
-    HypershadeWindow;
-    for($i = 0; $i &lt; size($filenames); $i++)
+    std::unique_ptr&lt;object_storage_interface&gt; createACopy() const override
     {
-        textureTo2DPlane($filenames[$i]);
+        return std::make_unique&lt;Tobject_storage&gt;(m_value);
     }
+
+    T m_value;
+};
+
+struct object
+{
+    object() = default;
+
+    template &lt;typename T&gt;
+    object(const T&amp; ref) :
+        m_storage(std::make_unique&lt;Tobject_storage&lt;T&gt;&gt;(std::move(ref)))
+    { }
+
+    object(const object&amp; ref) :
+        m_storage(ref.m_storage ? ref.m_storage-&gt;createACopy() : nullptr)
+    {}
+
+    object(object&amp;&amp;) noexcept = default; // noexcept ...
+
+    object&amp; operator=(const object&amp; ref)
+    {
+        m_storage = ref.m_storage ? ref.m_storage-&gt;createACopy() : nullptr;
+        return *this;
+    }
+
+private :
+
+    std::unique_ptr&lt;object_storage_interface&gt; m_storage;
+};
+
+int main()
+{
+    std::vector&lt;object&gt; objects;
+
+    object a = 5;
+    object b = std::string(&quot;123&quot;);
+
+    object x = b;
+    x = a;
+
+    objects.emplace_back(a);
+    objects.emplace_back(b);
+    objects.emplace_back(x);
+
+    return 0;
 }
-
-promptForFiles();
 </code></pre>
-
-<p>I&rsquo;ve tested in Maya 2017, but it should work just fine in all older versions.<br />
-I hope you find it useful! All kind of critique and feature requests are very welcome ^_^</p>
 
       </article>
 
       <ul class="pager blog-pager">
         
           <li class="previous">
-            <a href="https://ongamex.github.io/post/001.codesnippets/" data-toggle="tooltip" data-placement="top" title="C&#43;&#43; Code Snippets 1">&larr; Previous Post</a>
+            <a href="https://ongamex.github.io/post/002.cpp.reflections/" data-toggle="tooltip" data-placement="top" title="C&#43;&#43; reflection/introspection system">&larr; Previous Post</a>
           </li>
         
-        
-          <li class="next">
-            <a href="https://ongamex.github.io/post/002.cpp.reflections/" data-toggle="tooltip" data-placement="top" title="C&#43;&#43; reflection/introspection system">Next Post &rarr;</a>
-          </li>
         
       </ul>
 

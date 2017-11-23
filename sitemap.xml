@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://ongamex.github.io/post/004.anyobject/</loc>
+    <lastmod>2017-11-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://ongamex.github.io/post/002.cpp.reflections/</loc>
     <lastmod>2017-09-28T00:00:00+00:00</lastmod>
   </url>
@@ -23,7 +28,7 @@
   
   <url>
     <loc>https://ongamex.github.io/tags/c&#43;&#43;/</loc>
-    <lastmod>2017-09-04T00:00:00+00:00</lastmod>
+    <lastmod>2017-11-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -45,19 +50,19 @@
   
   <url>
     <loc>https://ongamex.github.io/post/</loc>
-    <lastmod>2017-09-28T00:00:00+00:00</lastmod>
+    <lastmod>2017-11-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://ongamex.github.io/tags/</loc>
-    <lastmod>2017-09-04T00:00:00+00:00</lastmod>
+    <lastmod>2017-11-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://ongamex.github.io/</loc>
-    <lastmod>2017-09-28T00:00:00+00:00</lastmod>
+    <lastmod>2017-11-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
