@@ -179,7 +179,7 @@ ga('send', 'pageview');
                 
                   <span class="post-meta">
   <i class="fa fa-calendar-o"></i>&nbsp;Posted on September 4, 2017
-  &nbsp;|&nbsp; <i class="fa fa-clock-o"></i> 3 min (625 mots)
+  &nbsp;|&nbsp; <i class="fa fa-clock-o"></i> 3 min (591 mots)
   
 </span>
 
@@ -265,9 +265,6 @@ inline std::string string_format(const char* const fmt_str, ...)
     return retval;
 }
 </code></pre>
-
-<p>I guess it could be done in a safer way by using a <code>char*</code> or <code>std::unique_ptr&lt;char[]&gt;</code> to get the result of <code>vsnprintf</code> and then transfer it to <code>std::string</code>,
- but that one works just fine.</p>
 
 <h1 id="simple-file-open-dialog">Simple file open dialog.</h1>
 
